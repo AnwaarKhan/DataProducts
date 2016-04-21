@@ -1,0 +1,54 @@
+---
+title       : Data Products
+subtitle    : Pitch Presentation
+author      : Anwaar Khan
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Introduction
+
+========================================================
+This presentation is part of the Course Project for the Coursera Developing Data Products assignment. There are two parts to this assignment.
+
+We are covering second part in this presentation.
+
+--- .class #id 
+
+## Select the best car for your trip App
+
+========================================================
+
+This app helps you to choose a car for a trip, using the mtcars dataset.
+
+First, you need to inform the distance of your trip and the price of gasoline in your region. 
+
+Second, you can choose some caractheristcs of the cars that you desire: Cylinders, Displacement, Horse Power and Transmission.
+
+--- .class #id 
+
+## Slide With Code
+
+========================================================
+The data used in the app comes from the Motor Trend Car Road Tests (mtcars) dataset:
+
+```{r, echo=TRUE}
+summary(mtcars)
+```
+
+--- .class #id 
+
+## Slide With plot
+
+========================================================
+Here we can see the relationship between three variables: miles per gallon (mpg), displacement (disp) and weight (wt).
+
+```{r, echo=TRUE}
+library(car)
+scatterplot.matrix(~mpg+disp+wt, data=mtcars, cex.axis=1.5)
+```
